@@ -1,0 +1,37 @@
+/* 子导航条：默认隐藏 */
+.company-rules-subnavbar {
+  padding: 0;
+  border-bottom: none;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+/* 当有内容时，展示毛玻璃效果 */
+.company-rules-subnavbar:not(:empty) {
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1px solid hsl(var(--border, 240 3.7% 15.9%) / 0.4);
+  background: hsl(var(--background, 240 10% 3.9%) / 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* 内容框 */
+.company-rules-content {
+  flex: 1;
+  overflow: auto;
+  padding: 1.5rem;
+  background: transparent;
+}
+
+.company-rules-content__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  color: hsl(var(--muted-foreground, 240 5% 64.9%));
+  font-size: 0.9rem;
+}

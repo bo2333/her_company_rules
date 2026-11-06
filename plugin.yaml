@@ -1,0 +1,6 @@
+name: company_rules
+version: "1.0.0
+description: 公司规则管理中心 — 主导航与子插件容器
+entry: __init__.py
+kind: standalone
+python_dependencies: []

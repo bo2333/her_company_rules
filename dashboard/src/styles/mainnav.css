@@ -1,0 +1,180 @@
+/* 主导航条容器 */
+.company-rules-mainnav {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  background: hsl(var(--background, 240 10% 3.9%) / 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid hsl(var(--border, 240 3.7% 15.9%) / 0.5);
+  flex-shrink: 0;
+  min-height: 3.5rem;
+  z-index: 10;
+}
+
+.company-rules-mainnav__items {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  height: 100%;
+}
+.company-rules-mainnav__items::-webkit-scrollbar {
+  display: none;
+}
+
+/* 标签基础样式 */
+.company-rules-mainnav__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  color: hsl(var(--muted-foreground, 240 5% 64.9%));
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  height: 100%;
+  padding: 0 0.75rem;
+}
+
+.company-rules-mainnav__item:hover {
+  color: hsl(var(--foreground, 0 0% 98%));
+  background: hsl(var(--muted, 240 3.7% 15.9%) / 0.3);
+}
+
+/* --- 尺寸变体 --- */
+.company-rules-mainnav__item--size-xs { font-size: 0.7rem; padding: 0 0.5rem; }
+.company-rules-mainnav__item--size-sm { font-size: 0.8rem; }
+.company-rules-mainnav__item--size-md { font-size: 0.9rem; }
+.company-rules-mainnav__item--size-lg { font-size: 1rem; padding: 0 1rem; }
+
+/* --- 标签形状变体 --- */
+.company-rules-mainnav__item--variant-underline {
+  border-radius: 0;
+}
+.company-rules-mainnav__item--variant-pill {
+  border-radius: 9999px;
+  height: 2.25rem;
+  margin: auto 0;
+}
+.company-rules-mainnav__item--variant-block {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.company-rules-mainnav__item--variant-rounded {
+  border-radius: 0.375rem;
+  height: 2.25rem;
+  margin: auto 0;
+}
+.company-rules-mainnav__item--variant-border {
+  border-radius: 0.375rem;
+  border-color: hsl(var(--border, 240 3.7% 15.9%) / 0.5);
+  height: 2.25rem;
+  margin: auto 0;
+}
+
+/* --- 选中通用基础（文字高亮） --- */
+.company-rules-mainnav__item--active-underline,
+.company-rules-mainnav__item--active-filled,
+.company-rules-mainnav__item--active-outline,
+.company-rules-mainnav__item--active-glow,
+.company-rules-mainnav__item--active-gradient {
+  color: hsl(var(--primary, 217.2 91.2% 59.8%)) !important;
+  font-weight: 600;
+  background: transparent !important;
+}
+
+/* --- 底部指示线 (仅在 underline 形态下生效) --- */
+.company-rules-mainnav__item--variant-underline.company-rules-mainnav__item--active-underline::after,
+.company-rules-mainnav__item--variant-underline.company-rules-mainnav__item--active-filled::after,
+.company-rules-mainnav__item--variant-underline.company-rules-mainnav__item--active-outline::after,
+.company-rules-mainnav__item--variant-underline.company-rules-mainnav__item--active-glow::after,
+.company-rules-mainnav__item--variant-underline.company-rules-mainnav__item--active-gradient::after,
+.company-rules-mainnav__item--variant-block.company-rules-mainnav__item--active-underline::after,
+.company-rules-mainnav__item--variant-block.company-rules-mainnav__item--active-filled::after,
+.company-rules-mainnav__item--variant-block.company-rules-mainnav__item--active-outline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: hsl(var(--primary, 217.2 91.2% 59.8%));
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 -2px 10px hsl(var(--primary, 217.2 91.2% 59.8%) / 0.6);
+}
+
+/* --- 各个形态下的选中背景 / 边框 --- */
+/* 胶囊、圆角的选中填充 */
+.company-rules-mainnav__item--variant-pill.company-rules-mainnav__item--active-filled,
+.company-rules-mainnav__item--variant-rounded.company-rules-mainnav__item--active-filled {
+  background: hsl(var(--primary, 217.2 91.2% 59.8%)) !important;
+  color: hsl(var(--primary-foreground, 210 40% 98%)) !important;
+  text-shadow: none;
+}
+
+/* 胶囊、圆角的选中微光 */
+.company-rules-mainnav__item--variant-pill.company-rules-mainnav__item--active-glow,
+.company-rules-mainnav__item--variant-rounded.company-rules-mainnav__item--active-glow,
+.company-rules-mainnav__item--variant-border.company-rules-mainnav__item--active-glow {
+  background: hsl(var(--primary, 217.2 91.2% 59.8%) / 0.15) !important;
+  text-shadow: 0 0 8px hsl(var(--primary, 217.2 91.2% 59.8%) / 0.6);
+}
+
+/* 描边形态的选中描边 */
+.company-rules-mainnav__item--variant-border.company-rules-mainnav__item--active-outline,
+.company-rules-mainnav__item--variant-rounded.company-rules-mainnav__item--active-outline,
+.company-rules-mainnav__item--variant-pill.company-rules-mainnav__item--active-outline {
+  border-color: hsl(var(--primary, 217.2 91.2% 59.8%)) !important;
+}
+
+/* 渐变的选中效果（左侧色带） */
+.company-rules-mainnav__item--active-gradient {
+  background: linear-gradient(90deg, hsl(var(--primary, 217.2 91.2% 59.8%) / 0.2), transparent) !important;
+  border-left: 3px solid hsl(var(--primary, 217.2 91.2% 59.8%)) !important;
+  border-radius: 0 0.375rem 0.375rem 0 !important;
+}
+
+/* 设置按钮 */
+.company-rules-mainnav__settings {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.45rem 0.85rem;
+  margin-left: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid hsl(var(--border, 240 3.7% 15.9%) / 0.6);
+  border-radius: 0.5rem;
+  background: hsl(var(--muted, 240 3.7% 15.9%) / 0.3);
+  backdrop-filter: blur(8px);
+  color: hsl(var(--foreground, 0 0% 98%));
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.2), inset 0 1px 0 hsl(var(--foreground, 0 0% 98%) / 0.1);
+}
+
+.company-rules-mainnav__settings:hover {
+  background: hsl(var(--muted, 240 3.7% 15.9%) / 0.6);
+  border-color: hsl(var(--border, 240 3.7% 15.9%) / 0.9);
+}
+
+.company-rules-mainnav__settings:active {
+  transform: scale(0.96);
+}
+
+.company-rules-mainnav__settings-label {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .company-rules-mainnav__settings-label { display: none; }
+  .company-rules-mainnav__settings { padding: 0.4rem; }
+}

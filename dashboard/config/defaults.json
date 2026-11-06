@@ -1,0 +1,6 @@
+{
+  "items": [
+    { "id": "navbar_main_1", "name": "主导航 1", "description": "默认主导航" }
+  ],
+  "appearance": { "size": "md", "variant": "tab-underline", "activeStyle": "underline" }
+}

@@ -1,0 +1,57 @@
+{
+  "texts": {
+    "settingsButton": "设置",
+    "settingsTitle": "设置",
+    "closeButton": "✕",
+    "loading": "加载中…",
+    "emptyNav": "请先添加一个主导航",
+    "emptySubNavs": "此主导航下暂无子导航",
+    "transferPlaceholder": "转移…",
+    "confirmDelete": "确认删除",
+    "cancel": "取消",
+    "delete": "删除",
+    "add": "添加",
+    "install": "执行安装",
+    "labels": {
+      "name": "名字",
+      "description": "描述（可选）",
+      "size": "按钮大小",
+      "variant": "标签样式",
+      "activeStyle": "选中样式",
+      "url": "URL",
+      "navSelect": "主导航"
+    },
+    "placeholders": {
+      "navName": "如：人事规则",
+      "url": "https://... 或 本地路径"
+    }
+  },
+  "settingsTabs": [
+    { "key": "general", "label": "常规", "component": "GeneralSettings" },
+    { "key": "add",     "label": "添加", "component": "AddNavItem" },
+    { "key": "adjust",  "label": "调整", "component": "AdjustNavItems" },
+    { "key": "delete",  "label": "删除", "component": "DeleteNavItems" },
+    { "key": "install", "label": "安装", "component": "InstallPlugin" }
+  ],
+  "navButtonSizes": [
+    { "key": "xs", "label": "极小", "className": "company-rules-mainnav__item--size-xs" },
+    { "key": "sm", "label": "小", "className": "company-rules-mainnav__item--size-sm" },
+    { "key": "md", "label": "中", "className": "company-rules-mainnav__item--size-md" },
+    { "key": "lg", "label": "大", "className": "company-rules-mainnav__item--size-lg" }
+  ],
+  "navButtonVariants": [
+    { "key": "tab-underline", "label": "下划线", "className": "company-rules-mainnav__item--variant-underline" },
+    { "key": "tab-pill",      "label": "胶囊",   "className": "company-rules-mainnav__item--variant-pill" },
+    { "key": "tab-block",     "label": "块状",   "className": "company-rules-mainnav__item--variant-block" },
+    { "key": "tab-rounded",   "label": "圆角",   "className": "company-rules-mainnav__item--variant-rounded" },
+    { "key": "tab-border",    "label": "边框",   "className": "company-rules-mainnav__item--variant-border" }
+  ],
+  "navActiveStyles": [
+    { "key": "filled",    "label": "填充",   "className": "company-rules-mainnav__item--active-filled" },
+    { "key": "underline", "label": "下划线", "className": "company-rules-mainnav__item--active-underline" },
+    { "key": "outline",   "label": "描边",   "className": "company-rules-mainnav__item--active-outline" },
+    { "key": "glow",      "label": "微光",   "className": "company-rules-mainnav__item--active-glow" },
+    { "key": "gradient",  "label": "渐变",   "className": "company-rules-mainnav__item--active-gradient" }
+  ],
+  "icons": { "Settings": "Settings", "Star": "Star", "Puzzle": "Puzzle", "Rules": "Rules" }
+}

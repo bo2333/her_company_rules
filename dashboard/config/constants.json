@@ -1,0 +1,19 @@
+{
+  "apiPrefix": "/api/plugins/company_rules",
+  "pluginName": "company_rules",
+  "dataDir": "company_rules",
+  "navIdPattern": "^navbar_main_\\d+$",
+  "limits": {
+    "navItems": 50,
+    "nameLength": 64,
+    "descriptionLength": 256
+  },
+  "events": {
+    "setActiveSubNav": "company-rules:setActiveSubNav"
+  },
+  "classPrefix": "company-rules",
+  "defaults": {
+    "icon": "Puzzle",
+    "settingsIcon": "Settings"
+  }
+}
