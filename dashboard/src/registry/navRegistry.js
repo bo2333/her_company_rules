@@ -20,13 +20,13 @@ export function createNavRegistry(registerSlot) {
 
   function registerSubNav({ navId, subNavId, label, icon = "Puzzle", order = 0, button, content }) {
     if (!navId || !subNavId || !button || !content) {
-      console.error("[company_rules] registerSubNav 缺少必填字段");
+      console.error("[her_company_rules] registerSubNav 缺少必填字段");
       return;
     }
     const nav = ensure(navId);
     nav.set(subNavId, { subNavId, label: label || subNavId, icon, order, navId });
-    registerSlot("company_rules", `${navId}:subnavbar`, button);
-    registerSlot("company_rules", `${navId}:content`, content);
+    registerSlot("her_company_rules", `${navId}:subnavbar`, button);
+    registerSlot("her_company_rules", `${navId}:content`, content);
     bump();
   }
 

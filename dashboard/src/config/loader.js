@@ -1,8 +1,8 @@
 const overrides = { settingsTabs: [], icons: {} };
 
 const FALLBACK_CONSTANTS = {
-  apiPrefix: "/api/plugins/company_rules",
-  pluginName: "company_rules",
+  apiPrefix: "/api/plugins/her_company_rules",
+  pluginName: "her_company_rules",
   events: { setActiveSubNav: "company-rules:setActiveSubNav" },
 };
 
@@ -30,7 +30,7 @@ export async function loadConstants(SDK) {
   try {
     return await SDK.fetchJSON(`${FALLBACK_CONSTANTS.apiPrefix}/constants`);
   } catch (err) {
-    console.warn("[company_rules] constants 加载失败，使用内置 fallback", err);
+    console.warn("[her_company_rules] constants 加载失败，使用内置 fallback", err);
     return FALLBACK_CONSTANTS;
   }
 }
@@ -41,7 +41,7 @@ export async function loadUIConfig(SDK, constants) {
     const base = await SDK.fetchJSON(`${prefix}/ui-config`);
     return applyOverrides(base);
   } catch (err) {
-    console.warn("[company_rules] ui-config 加载失败", err);
+    console.warn("[her_company_rules] ui-config 加载失败", err);
     return applyOverrides({});
   }
 }
@@ -51,7 +51,7 @@ export async function loadNavConfig(SDK, constants) {
   try {
     return await SDK.fetchJSON(`${prefix}/nav-config`);
   } catch (err) {
-    console.warn("[company_rules] nav-config 加载失败", err);
+    console.warn("[her_company_rules] nav-config 加载失败", err);
     return { items: [], appearance: {} };
   }
 }

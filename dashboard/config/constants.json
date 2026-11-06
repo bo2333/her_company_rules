@@ -1,7 +1,7 @@
 {
-  "apiPrefix": "/api/plugins/company_rules",
-  "pluginName": "company_rules",
-  "dataDir": "company_rules",
+  "apiPrefix": "/api/plugins/her_company_rules",
+  "pluginName": "her_company_rules",
+  "dataDir": "her_company_rules",
   "navIdPattern": "^navbar_main_\\d+$",
   "limits": {
     "navItems": 50,

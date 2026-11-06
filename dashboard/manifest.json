@@ -5,7 +5,7 @@
   "icon": "Rules",
   "version": "1.0.0",
   "tab": {
-    "path": "/company-rules",
+    "path": "/her_company-rules",
     "position": "after:skills",
     "hidden": false
   },

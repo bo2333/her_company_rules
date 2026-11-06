@@ -27,7 +27,7 @@ export function useNavConfig(SDK) {
         loading: false,
       });
     })().catch((err) => {
-      console.error("[company_rules] 初始化失败", err);
+      console.error("[her_company_rules] 初始化失败", err);
       if (!cancelled) setState((prev) => ({ ...prev, loading: false }));
     });
     return () => { cancelled = true; };
@@ -43,7 +43,7 @@ export function useNavConfig(SDK) {
         const next = typeof updater === "function" ? updater(prev.navConfig) : updater;
         const prevSnapshot = prev.navConfig;
         saveNavConfig(SDK, next, prev.constants).catch((err) => {
-          console.error("[company_rules] 保存失败，回滚", err);
+          console.error("[her_company_rules] 保存失败，回滚", err);
           setState((s) => (s.navConfig === next ? { ...s, navConfig: prevSnapshot } : s));
         });
         return { ...prev, navConfig: next };

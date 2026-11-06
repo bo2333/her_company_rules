@@ -12,7 +12,7 @@ import InstallPlugin from "./components/settings/InstallPlugin"; // 新增
   "use strict";
   const SDK = window.__HERMES_PLUGIN_SDK__;
   if (!SDK?.React) {
-    console.error("[company_rules] 未找到 Hermes Plugin SDK");
+    console.error("[her_company_rules] 未找到 Hermes Plugin SDK");
     return;
   }
 
@@ -39,7 +39,7 @@ import InstallPlugin from "./components/settings/InstallPlugin"; // 新增
     }
   };
 
-  window.__HERMES_PLUGINS__.register("company_rules", (props) =>
+  window.__HERMES_PLUGINS__.register("her_company_rules", (props) =>
     App({ ...props, registry })
   );
 })();

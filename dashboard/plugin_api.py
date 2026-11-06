@@ -34,7 +34,7 @@ NAV_ITEMS_MAX = int(LIMITS.get("navItems", 50))
 
 DATA_DIR = os.path.join(
     os.path.expanduser("~/.hermes/plugin-data"),
-    CONSTANTS.get("dataDir", "company_rules"),
+    CONSTANTS.get("dataDir", "her_company_rules"),
 )
 DATA_PATH = os.path.join(DATA_DIR, "nav_config.json")
 
@@ -90,5 +90,5 @@ async def update_nav_config(config: NavConfig) -> Dict[str, Any]:
 async def install_plugin(req: InstallRequest) -> Dict[str, Any]:
     # 此处编写实际的安装逻辑：
     # 下载 req.url，子插件自行通过 registerSubNav 注册名字和内容
-    print(f"[company_rules] 收到安装请求: {req.url} -> {req.navId}")
+    print(f"[her_company_rules] 收到安装请求: {req.url} -> {req.navId}")
     return {"ok": True, "message": "安装任务已下发"}

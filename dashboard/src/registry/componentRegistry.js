@@ -2,7 +2,7 @@ const registry = new Map();
 
 export function registerComponent(key, comp) {
   if (typeof comp !== "function" && typeof comp !== "object") {
-    throw new Error(`[company_rules] 非法的组件: ${key}`);
+    throw new Error(`[her_company_rules] 非法的组件: ${key}`);
   }
   registry.set(key, comp);
 }

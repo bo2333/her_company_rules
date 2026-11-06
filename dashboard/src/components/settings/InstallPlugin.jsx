@@ -18,7 +18,7 @@ export default function InstallPlugin({ navConfig, uiConfig, constants, SDK }) {
     setLoading(true);
     setMessage(null);
     try {
-      const apiPrefix = constants?.apiPrefix || "/api/plugins/company_rules";
+      const apiPrefix = constants?.apiPrefix || "/api/plugins/her_company_rules";
       const res = await SDK.fetchJSON(`${apiPrefix}/install`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
